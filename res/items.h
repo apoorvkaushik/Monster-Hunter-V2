@@ -26,6 +26,8 @@ private:
     int health;
     int height;
     Texture2D texture;
+    int screenwidth;
+    int screenheight;
 
     void monsterLoader()
     {
@@ -52,6 +54,12 @@ private:
     }
 
 public:
+    void screendimension(int screen_width, int screen_height)
+    {
+        screenwidth = screen_width;
+        screenheight = screen_height;
+    }
+
     void createMonster(int num_ber, int hea_lth)
     {
         number = num_ber;
@@ -59,7 +67,7 @@ public:
         monsterLoader();
     }
 
-    void drawRes(int screenwidth, int screenheight)
+    void drawRes()
     {
         drawingTexture(screenwidth, screenheight);
     }
@@ -104,7 +112,6 @@ public:
         playSound();
     }
 };
-
 
 // Code
 /*

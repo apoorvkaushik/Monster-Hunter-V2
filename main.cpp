@@ -39,6 +39,7 @@ int main()
     for (int i = 1; i <= 50; i++)
     {
         mnst[i].createMonster(i, i * 100);
+        mnst[i].screendimension(ScreenWidth, ScreenHeight);
     }
 
     // Main Loop
@@ -70,7 +71,7 @@ void drawElements()
 {
     if (lvl == mnst[lvl].monsterNumber())
     {
-        mnst[lvl].drawRes(ScreenWidth, ScreenHeight);
+        mnst[lvl].drawRes();
     }
 }
 
